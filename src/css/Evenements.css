@@ -1,0 +1,110 @@
+.events-page {
+    padding: 80px 20px;
+    color: white;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Carte principale */
+.event-card.large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0; /* On colle l'image au texte */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-bottom: 40px;
+}
+
+.event-card.large:hover {
+    transform: scale(1.02);
+    border-color: #f59e0b;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.event-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.1);
+}
+
+.status-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #f59e0b;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.event-info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(33, 33, 33, 0.4);
+}
+
+.event-date {
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.event-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.event-info p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.btn-fake {
+    font-weight: bold;
+    color: #f59e0b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .event-card.large {
+        grid-template-columns: 1fr;
+    }
+    .event-info {
+        padding: 30px;
+    }
+}

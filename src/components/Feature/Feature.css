@@ -1,0 +1,188 @@
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.feature.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature--left .feature__image {
+    transform: translateX(-100px); /* Vient de la gauche */
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
+    opacity: 0;
+}
+
+.feature--left .feature__text {
+    transform: translateX(100px); /* Vient de la droite */
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
+    opacity: 0;
+}
+
+/* --- Cas Inversé (Image à Droite, Texte à Gauche) --- */
+.feature--right .feature__image {
+    transform: translateX(100px); /* Vient de la droite */
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
+    opacity: 0;
+}
+
+.feature--right .feature__text {
+    transform: translateX(-100px); /* Vient de la gauche */
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1s ease;
+    opacity: 0;
+}
+
+.feature.visible .feature__image,
+.feature.visible .feature__text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Optionnel : Petit délai sur le texte pour un effet plus organique */
+.feature.visible .feature__text {
+    transition-delay: 0.2s;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    flex: 1;
+    max-width: 550px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.slideshow img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 1.2s ease;
+    transform: scale(1.05);
+}
+
+.slideshow .active img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Dots */
+.slideshow__dots {
+    position: absolute;
+    bottom: 20px;
+    right: -10%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 15px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.dot {
+    width:15px;
+    height: 15px;
+    min-width: 15px;
+    min-height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #fff;
+    width: 22px;
+    border-radius: 10px;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.dot:focus {
+    outline: none;
+}
+
+/* Texte */
+.feature__text {
+    flex: 1;
+}
+
+.feature__text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #ec9c5c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature__text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Inversion */
+.feature--right { flex-direction: row-reverse; }
+
+/* --- Ajustements Responsive --- */
+@media (max-width: 900px) {
+    .feature {
+        flex-direction: column !important; /* Force le passage en colonne */
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+        overflow: hidden; /* Sécurité pour éviter le scroll horizontal pendant l'anim */
+    }
+
+    .slideshow {
+        width: 100%; /* L'image doit prendre toute la largeur dispo sur mobile */
+        max-width: 100%;
+        flex: none; /* Désactive le flex grow/shrink qui peut écraser l'image */
+    }
+
+    /* Désactiver le mouvement latéral sur mobile pour éviter que l'image sorte de l'écran */
+    .feature--left .feature__image,
+    .feature--right .feature__image,
+    .feature--left .feature__text,
+    .feature--right .feature__text {
+        transform: translateY(30px); /* Sur mobile, on préfère un mouvement de bas en haut */
+        opacity: 0;
+    }
+
+    /* On remet à zéro au moment du passage en .visible */
+    .feature.visible .feature__image,
+    .feature.visible .feature__text {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    /* On replace les points au centre sur mobile */
+    .slideshow__dots {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 10px;
+    }
+}
