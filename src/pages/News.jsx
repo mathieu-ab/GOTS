@@ -53,9 +53,8 @@ export default function News() {
                     </div>
 
                     <div className="video-container">
-                        {/* Note : parent=localhost est nécessaire pour le dev, change par ton domaine en prod */}
                         <iframe
-                            src="https://clips.twitch.tv/embed?clip=RoughAuspiciousZebraKreygasm-31z3ENc1x-BLUi7Z&parent=localhost&parent=teoadshow.fr"
+                            src="https://clips.twitch.tv/embed?clip=RoughAuspiciousZebraKreygasm-31z3ENc1x-BLUi7Z&parent=gamesonthestage.fr&parent=gamesonthestage.fr"
                             allowFullScreen
                         ></iframe>
                     </div>
