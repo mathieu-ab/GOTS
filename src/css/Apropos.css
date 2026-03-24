@@ -66,12 +66,11 @@
 
 .partner-card img {
     max-width: 100px;
-    filter: grayscale(1) brightness(2);
     margin-bottom: 15px;
     transition: 0.3s;
 }
 
-.partner-card:hover img { filter: grayscale(0) brightness(1); }
+.partner-card:hover img { zoom: 1.4; }
 
 /* Team */
 .team-grid {

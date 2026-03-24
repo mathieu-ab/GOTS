@@ -83,7 +83,7 @@ export default function Apropos() {
 
                     {/* PARTNERS */}
                     <section className="partners-section">
-                        <h2>Nos Partenaires</h2>
+                        <h2>Ils nous soutiennent</h2>
                         <div className="partners-grid">
                             {partners.map((p, i) => (
                                 <a key={i} href={p.link} target="_blank" rel="noreferrer" className="partner-card">
@@ -115,7 +115,7 @@ export default function Apropos() {
                         </div>
                         <div className="email-box">
                             <p>Pour toute demande officielle :</p>
-                            <a href="mailto:teoadshow@gmail.com" className="email-link">teoadshow@gmail.com</a>
+                            <a href="mailto:gamesonthestage@gmail.com" className="email-link">gamesonthestage@gmail.com</a>
                         </div>
                     </section>
                 </main>
