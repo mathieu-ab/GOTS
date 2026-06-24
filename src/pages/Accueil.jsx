@@ -60,7 +60,7 @@ export default function Accueil() {
 
             <Feature
                 title="TSLAN"
-                description="GOTS organise tous les ans une compétition de jeux vidéo sur scène qui oppose plusieurs joueurs. Cet évènement baptisé TSLAN est intégralement produit par notre association et permet de réunir des passionnés autour d'un spectacle tout le weekend, en ligne et sur places."
+                description="GOTS organise tous les ans une compétition de jeux vidéo sur scène qui oppose plusieurs joueurs. Cet évènement baptisé TSLAN est intégralement produit par notre association et permet de réunir des passionnés autour d'un spectacle tout le weekend, en ligne et sur place."
                 videoUrl="https://tslan.fr"
                 images={tslanImages}
                 reverse={true}
