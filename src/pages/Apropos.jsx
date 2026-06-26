@@ -21,6 +21,7 @@ export default function Apropos() {
 
     return (
             <div className="page-content about-page">
+		<br/ >
                 <section className="section-card">
                         <h1 className="page-section-title">À Propos de GOTS</h1>
                         <p className="page-subtitle">Fondée en septembre 2025 par Teoad, Azeohd et Azaaran.</p>

@@ -23,7 +23,10 @@ export default function Accueil() {
     return (
         
             <div >
-                <section className="plain-image container">
+		<br/ >
+		<br/ >
+		<br/ >
+                <section className="container">
                     <img src="/img/banner.png" alt="Bannière" className="plain-image__img" />
                 </section>
 
