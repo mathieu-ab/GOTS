@@ -21,7 +21,6 @@ function ScrollToTop() {
   return null;
 }
 
-import "./App.css";
 
 function App() {
   return (

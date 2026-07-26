@@ -21,6 +21,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    padding-top: 80px;
     min-height: 100vh;
     background: radial-gradient(circle at top center, rgba(57, 217, 159, 0.08), transparent 24%),
         linear-gradient(180deg, #081222 0%, #04050b 70%, #030306 100%);

@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const links = [
@@ -9,20 +9,17 @@ const links = [
 ];
 
 export default function Header() {
-  const location = useLocation();
-
   return (
     <header className="site-header">
       <div className="header-inner">
         <nav className="nav-links">
           {links.map((link) => (
-            <Link
+            <NavLink
               key={link.path}
               to={link.path}
-              className={location.pathname === link.path ? 'active' : ''}
             >
               {link.label}
-            </Link>
+            </NavLink>
           ))}
         </nav>
       </div>

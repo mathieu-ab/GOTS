@@ -3,14 +3,11 @@ import '../App.css';
 
 export default function MentionsLegales() {
   useEffect(() => {
-    document.title = 'GOTS';
+    document.title = 'Mentions légales | GOTS';
   }, []);
 
   return (
     <div>
-    <br />
-    <br/ >
-    <br/ >
     <div className="content-card legal-page">
       <h1 className="page-title">Mentions légales</h1>
       <p className="page-intro">Conformément à la Loi pour la Confiance dans l'Économie Numérique, voici les informations de l'éditeur et de l'hébergement du site GOTS.</p>
