@@ -19,6 +19,14 @@ export default function News() {
             <section className="section-card news-section">
                 <span className="news-badge">Annonce</span>
                     <h1 className="page-section-title">TSLAN 2k26 le 24 et 25 octobre 2026</h1>
+                <div className="ticket-info">
+                    <h2>Billetterie ouverte au public</h2>
+                    <p><strong>Horaires :</strong> événement les 24 et 25 octobre 2026, de 10h à 23h. Espaces accessibles de 9h45 à 23h15. Buvette et restauration de 10h à 23h.</p>
+                    <p><strong>Tarifs :</strong> 6 € la journée ou 10 € le pass weekend.</p>
+                    <p><strong>Lieu :</strong> Art-en-Seine, 19 Bis Av. du Professeur Paul Portier, 10110 Bar-sur-Seine.</p>
+                    <a className="ticket-button" href="https://www.helloasso.com/associations/games-on-the-stage/evenements/billetterie-public-tslan2k26" target="_blank" rel="noreferrer">Acheter ma place</a>
+                    <a className="official-link" href="https://tslan.fr" target="_blank" rel="noreferrer">Plus d'infos sur le site officiel de la TSLAN</a>
+                </div>
                 <div className="news-content">
                     <p className="page-subtitle">Reveal des jeux : </p>
                 </div>

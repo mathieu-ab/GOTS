@@ -25,6 +25,47 @@
 
 .news-badge.red { background: #ef4444; }
 
+.ticket-info {
+    margin: 25px 0 35px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.ticket-info h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+}
+
+.ticket-info p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.ticket-button,
+.official-link {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.ticket-button {
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.ticket-button:hover { background: #2563eb; }
+
+.official-link {
+    margin-left: 18px;
+    color: #93c5fd;
+}
+
 .news-content h1, .news-content h2 {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
     margin-bottom: 15px;
@@ -84,4 +125,5 @@
 
 @media (max-width: 600px) {
     .video-selector { flex-direction: column; }
+    .official-link { margin-left: 0; }
 }
