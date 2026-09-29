@@ -19,6 +19,17 @@ export default function News() {
             <section className="section-card news-section">
                 <span className="news-badge">Annonce</span>
                     <h1 className="page-section-title">TSLAN 2k26 le 24 et 25 octobre 2026</h1>
+                
+                <div className="ticket-info">
+                    <h2>La TSLAN 2k26 c'est maintenant</h2>
+                    <p>Venez nous voir sur place ou sur twitch : </p>
+                    <div class="twitch-player">
+                        <iframe
+                            src="https://player.twitch.tv/?channel=teoad_show&parent=gamesonthestage.fr/"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
                 <div className="ticket-info">
                     <h2>Billetterie ouverte au public</h2>
                     <p><strong>Horaires :</strong> événement les 24 et 25 octobre 2026, de 10h à 23h. Espaces accessibles de 9h45 à 23h15. Buvette et restauration de 10h à 23h.</p>
