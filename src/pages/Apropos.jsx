@@ -4,6 +4,9 @@ import '../css/Apropos.css';
 import artEnSceneImg from '../assets/images/partners/art-en-scene.webp';
 import leviacomImg from '../assets/images/partners/leviacom.webp';
 import offpointImg from '../assets/images/partners/offpoint.webp';
+import bssImg from '../assets/images/partners/bss.webp';
+import cm68Img from '../assets/images/partners/cm68.webp';
+import tspImg from '../assets/images/partners/tsp.webp';
 
 import teoadImg from '../assets/images/team/teoad.webp';
 import azeohdImg from '../assets/images/team/azeohd.webp';
@@ -17,7 +20,10 @@ export default function Apropos() {
     const partners = [
         { name: "L'Art en Seine", img: artEnSceneImg, link: "https://www.facebook.com/lartenseine", desc: "Espace culturel à Bar sur Seine." },
         { name: "LeviaCom", img: leviacomImg, link: "https://leviacom.fr/", desc: "Expert en communication visuelle." },
-        { name: "Offpoint Media", img: offpointImg, link: "https://offpoint.media/", desc: "Production audiovisuelle technique." }
+        { name: "Offpoint Media", img: offpointImg, link: "https://offpoint.media/", desc: "Production audiovisuelle technique." },
+        { name: "Bar-sur-Seine", img: bssImg, link: "https://www.barsequanais.fr/bar-sur-seine-la-ville-2/", desc: "Site officiel de la ville et des services municipaux." },
+        { name: "Crédit Mutuel", img: cm68Img, link: "https://www.creditmutuel.fr/home/index.html", desc: "Banque et assurance pour particuliers et professionnels." },
+        { name: "Teoad Show Production", img: tspImg, link: "", desc: "" }
     ];
 
     const team = [
